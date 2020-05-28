@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationBarHome"
+        android:icon="@mipmap/home_normal"
+        android:title="@string/navigation_home" />
+    <item
+        android:id="@+id/navigationBarSelect"
+        android:icon="@mipmap/select_normal"
+        android:title="@string/navigation_select" />
+    <item
+        android:id="@+id/navigationBarPacket"
+        android:icon="@mipmap/red_packet_normal"
+        android:title="@string/navigation_red_packet" />
+    <item
+        android:id="@+id/navigationBarSearch"
+        android:icon="@mipmap/search_normal"
+        android:title="@string/navigation_search" />
+</menu>
