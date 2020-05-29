@@ -1,7 +1,5 @@
 package lol.cicco.tbunion.common;
 
-import com.lcodecore.tkrefreshlayout.utils.LogUtil;
-
 import java.util.concurrent.TimeUnit;
 
 import lol.cicco.tbunion.BuildConfig;
@@ -19,6 +17,7 @@ public class RetrofitConfiguration {
         retrofit = new Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_URL)
                 .client(getOkHttpClient())
+                .addConverterFactory(GsonConfiguration.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
