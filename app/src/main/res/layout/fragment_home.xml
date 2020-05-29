@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -49,9 +50,22 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/home_top_tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="30dp">
+        android:layout_height="30dp"
+        app:tabMode="scrollable"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/White"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="@color/White"
+        app:tabTextColor="@color/White"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
 
-    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/homeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
     <TextView
         android:layout_width="match_parent"

@@ -26,7 +26,7 @@ import retrofit2.Retrofit;
 
 public class GsonConfiguration {
 
-    private static final Gson gson = new GsonBuilder().create();
+    public static final Gson gson = new GsonBuilder().create();
 
     public static GsonConverterFactory create() {
         return new GsonConverterFactory();
@@ -45,7 +45,7 @@ public class GsonConfiguration {
             return (Converter<ResponseBody, Object>) value -> {
                 ResponseModel<JsonElement> result = gson.fromJson(value.string(), new TypeToken<ResponseModel<JsonElement>>(){}.getType());
                 if(result.code != ResponseModel.OK_CODE) {
-                    throw new HttpRequestException(result.code);
+                    throw new HttpRequestException(result.code, result.message);
                 }
                 return adapter.fromJson(gson.toJson(result.data));
             };
