@@ -12,4 +12,5 @@ public interface HomeApi {
     @GET("discovery/categories")
     Observable<List<CategoryEntity>> getHomeCategory();
 
+
 }
